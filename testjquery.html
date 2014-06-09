@@ -1,0 +1,64 @@
+<html>
+	<head>
+
+    <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+	<script language="javascript">//<![CDATA[
+
+    $(document).ready(function() {
+
+    $("#choix").hide();
+
+    $("#text").hide();
+
+    $("#type").change(function() {
+
+    if ( $("#type").val() == "3"){
+
+    $("#choix").show();
+
+    $("#text").show();
+
+    }
+
+    else{
+
+    $("#choix").hide();
+
+    $("#text").hide();
+
+    }
+
+    });
+
+    if ( $("#type").val() == "3"){
+
+    $("#choix").show();
+
+    $("#text").show();
+
+    }
+
+    $("#choix").change(function() {
+
+    var val = $("#choix").val();
+
+    $("#text").append(val + "\n");
+
+    });
+
+    });
+
+    //]]></script>
+	</head>
+	</body>
+
+    <form>
+    <select id="type"><option>choix de type</option><option value="1">type 1</option><option value="2">type 2</option><option value="3">type 3</option></select><br />
+    <select id="choix"><option>choix</option><option value="1">choix 1</option><option value="2">choix 2</option><option value="3">choix 3</option></select><br />
+    <textarea id="text"></textarea>
+    </form>
+	
+	
+	</body>
+	    
+</html>	
